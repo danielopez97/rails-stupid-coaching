@@ -1,0 +1,23 @@
+<div class="container pt-5">
+<h1 strong center>Stupid Coaching!</h1>
+<blockquote class="blockquote border-start border-5 ps-3 mt-3">
+  <p><%= @pregunta %></h4>
+  <figcaption class="blockquote-footer">
+    <cite title="Source Title">You</cite>
+  </figcaption>
+</blockquote>
+
+<blockquote class="blockquote border-start border-5 ps-3 mt-3">
+  <% if @pregunta == 'I am going to work' %>
+  <p>Great!</p>
+  <% elsif @pregunta.end_with?('?') %>
+  <p>Silly question, get dressed and go to work!</p>
+  <% else %>
+  <p>I don't care, get dressed and go to work!</p>
+  <% end %>
+  <figcaption class="blockquote-footer">
+    <cite title="Source Title">Coach</cite>
+  </figcaption>
+</blockquote>
+
+<%= link_to "Aks a new question", ask_path %>
